@@ -9,13 +9,15 @@ const Header = () => {
         NoteHub
       </Link>
       <nav aria-label="Main Navigation">
-        <ul className={css.navigation}>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
+        <div>
+          <ul className={css.navigation}>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
 
-          <AuthNavigation />
-        </ul>
+            <AuthNavigation />
+          </ul>
+        </div>
       </nav>
     </header>
   );

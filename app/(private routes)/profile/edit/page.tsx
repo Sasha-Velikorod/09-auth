@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import css from './EditProfilePage.module.css';
-import Link from 'next/link';
 import { updateMe, getMe } from '@/lib/api/clientApi';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -36,13 +35,17 @@ const EditProfilePage = () => {
     <main className={css.mainContent}>
       <div className={css.profileCard}>
         <h1 className={css.formTitle}>Edit Profile</h1>
-        <Image
-          src={avatar || '/default-avatar.png'}
-          alt="User Avatar"
-          width={120}
-          height={120}
-          className={css.avatar}
-        />
+        {avatar ? (
+          <Image
+            src={avatar}
+            alt="User Avatar"
+            width={120}
+            height={120}
+            className={css.avatar}
+          />
+        ) : (
+          <div className={css.avatarPlaceholder}>No Avatar</div>
+        )}
         <form className={css.profileInfo} onSubmit={handleSubmit}>
           <div className={css.usernameWrapper}>
             <label htmlFor="username">Username:</label>

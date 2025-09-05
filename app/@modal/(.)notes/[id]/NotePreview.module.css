@@ -44,25 +44,34 @@
   display: inline-block;
   padding: 4px 8px;
   font-size: 12px;
-  color: #0d6efd;
+  color: #4b4747;
   background-color: #e7f1ff;
-  border: 1px solid #b6d4fe;
+  border: 1px solid #393939;
   border-radius: 12px;
   max-width: 100px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
+  width: 70px;
 }
 
 .backBtn {
   align-self: flex-start;
   padding: 6px 12px;
   font-size: 14px;
-  color: #000000;
+  color: #333;
+  background-color: #393939;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-decoration: underline;
   display: inline-block;
   background-color: transparent;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

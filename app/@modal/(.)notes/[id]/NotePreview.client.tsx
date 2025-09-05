@@ -28,13 +28,13 @@ const NotePreview = () => {
         <div className={css.item}>
           <h2 className={css.title}>{note.title}</h2>
           <p className={css.content}>{note.content}</p>
-          <div className={css.footerPreviewModal}>
+          <div className={css.cont}>
             <span className={css.tag}>{note.tag}</span>
             <p className={css.date}>{note.createdAt}</p>
+            <button className={css.backBtn} onClick={onClose}>
+              Back
+            </button>
           </div>
-          <button className={css.backBtn} onClick={onClose}>
-            Back
-          </button>
         </div>
       )}
       {isLoading && <p>Loading...</p>}
