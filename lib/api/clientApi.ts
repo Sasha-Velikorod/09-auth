@@ -30,6 +30,11 @@ export const getMe = async () => {
   return response.data;
 };
 
+export const updateMe = async (username: string) => {
+  const response = await nextServer.patch<User>('/users/me', { username });
+  return response.data;
+};
+
 interface FetchNotesResponse {
   notes: Note[];
   totalPages: number;

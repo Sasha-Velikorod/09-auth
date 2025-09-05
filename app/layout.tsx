@@ -4,6 +4,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 
 export const metadata: Metadata = {
   title: 'Create Note App',
@@ -41,10 +42,12 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={roboto.variable}>
         <TanStackProvider>
-          <Header />
-          {children}
-          {modal}
-          <Footer />
+          <AuthProvider>
+            <Header />
+            {children}
+            {modal}
+            <Footer />
+          </AuthProvider>
         </TanStackProvider>
         <div id="modal-root"></div>
       </body>
