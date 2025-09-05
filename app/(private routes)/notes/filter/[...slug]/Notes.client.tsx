@@ -1,7 +1,7 @@
 'use client';
 import css from './Notes.module.css';
 import NoteList from '../../../../../components/NoteList/NoteList';
-import { fetchNotes } from '../../../../../lib/api';
+import { fetchNotes } from '../../../../../lib/api/clientApi';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import Pagination from '../../../../../components/Pagination/Pagination';
