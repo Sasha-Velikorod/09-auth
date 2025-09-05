@@ -14,14 +14,16 @@ const AuthNavigation = () => {
   const handleLogoutClick = async () => {
     await logout();
     clearIsAuth();
-    router.push('/sing-in');
+    router.push('/sign-in');
   };
 
   return (
     <>
       {isAuth ? (
         <>
-          <TagsMenu />
+          <li>
+            <TagsMenu />
+          </li>
           <li className={css.navigationItem}>
             <Link
               href="/profile"
@@ -31,15 +33,15 @@ const AuthNavigation = () => {
               Profile
             </Link>
           </li>
-        </>
-      ) : (
-        <>
           <li className={css.navigationItem}>
             <p className={css.userEmail}>User email</p>
             <button className={css.logoutButton} onClick={handleLogoutClick}>
               Logout
             </button>
           </li>
+        </>
+      ) : (
+        <>
           <li className={css.navigationItem}>
             <Link
               href="/sign-in"

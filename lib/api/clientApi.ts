@@ -13,7 +13,7 @@ export const login = async (credentials: Credentials) => {
 };
 
 export const logout = async () => {
-  await nextServer.post<User>('/auth/login');
+  await nextServer.post<User>('/auth/logout');
 };
 
 interface SuccessSession {
