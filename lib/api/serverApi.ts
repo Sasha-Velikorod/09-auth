@@ -47,7 +47,7 @@ export const sessionStatus = async () => {
   const response = await nextServer.get('/auth/session', {
     headers: { Cookie: cookieStore.toString() },
   });
-  return response.data;
+  return response;
 };
 
 export const getMe = async () => {

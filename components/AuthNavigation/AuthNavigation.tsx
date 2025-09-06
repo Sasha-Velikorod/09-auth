@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 const AuthNavigation = () => {
   const router = useRouter();
-  const { user, isAuth, clearIsAuth } = useAuthStore();
+  const { user, isAuthenticated, clearIsAuth } = useAuthStore();
 
   const handleLogoutClick = async () => {
     await logout();
@@ -19,7 +19,7 @@ const AuthNavigation = () => {
 
   return (
     <>
-      {isAuth ? (
+      {isAuthenticated ? (
         <>
           <li>
             <TagsMenu />
